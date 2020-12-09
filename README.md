@@ -1,6 +1,6 @@
 ## pomodoroClock
 
-### This project was bootstapped with a keyboard.
+### This project was bootstapped with a malfunctioning keyboard.
 
 ### Technical Description
 
@@ -9,9 +9,9 @@
 - Vanilla JavaScript
 - [ProgressBar.js](https://progressbarjs.readthedocs.io/en/latest/)
 
-### Installation instructions
+### Dependencies
 
-- Not needed unless you do not have an IDE and / or browser.
+- Not used
 
 ### Usage
 
