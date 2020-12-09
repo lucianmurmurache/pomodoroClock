@@ -36,13 +36,11 @@ body::-webkit-scrollbar-track {
   background-color: #171717;
 }
 
-ul,
 li {
   list-style-type: decimal;
-}
-
-li {
   font-size: 1.6rem;
+  text-align: start;
+  margin: 0 2rem;
 }
 
 .hidden {
@@ -51,12 +49,22 @@ li {
 
 .logo {
   position: absolute;
-  max-width: 10%;
+  max-width: 12rem;
   top: 0;
   left: 0;
 }
 
 /* pomodoro clock */
+
+#pomodoroClock {
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 100, 0, 0.5);
+  box-shadow: 0px 0px 7px 1px rgba(0, 100, 0, 0.5);
+  border-radius: 0.6rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid rgba(0, 100, 0, 0.5);
+}
+
 #pomodoroClockTitle {
   font-size: 1.8rem;
 }
@@ -64,6 +72,12 @@ li {
 #pomodoroTimer {
   max-width: 25rem;
   margin: 2rem auto;
+}
+
+#pomodoroTimer svg {
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 100, 0, 0.5);
+  box-shadow: 0px 0px 7px 1px rgba(0, 100, 0, 0.5);
+  border-radius: 50%;
 }
 
 #pomodoroClockActions #pomodoroStart,
@@ -90,7 +104,7 @@ li {
 
 #pomodoroClockActions #pomodoroStart:focus-visible,
 #pomodoroClockActions #pomodoroStop:focus-visible {
-  box-shadow: 0 0 2pt 1pt #ff6347;
+  box-shadow: 0 0 2pt 1pt #ff3232;
 }
 
 /* Input */
@@ -111,7 +125,7 @@ input {
 }
 
 input:focus-visible {
-  box-shadow: 0 0 2pt 1pt #ff6347;
+  box-shadow: 0 0 3pt 1pt #ff3232;
 }
 
 input:placeholder-shown + label {
@@ -125,7 +139,6 @@ input:placeholder-shown + label {
 #pomodoroInput {
   display: inline-block;
   font-size: 1.2rem;
-  margin-top: 1rem;
 }
 
 #pomodoroInput label {
@@ -152,24 +165,22 @@ input:placeholder-shown + label {
   text-align: center;
 }
 
-/* Footer */
-footer {
-  position: absolute;
-  max-height: 5rem;
-  display: block;
-  font-size: 1.8rem;
-  left: 0;
-  bottom: 0;
-  right: 0;
+/* Media queries */
+
+@media (min-width: 481px) and (max-width: 840px) {
+  .logo {
+    max-width: 7.5rem;
+  }
 }
 
-footer a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0 45vw;
-  transition: all 320ms ease;
-}
+@media (max-width: 480px) {
+  #pomodoroClock {
+    margin: 0 1rem;
+  }
 
-footer a:hover {
-  color: #ff6347;
+  .logo {
+    max-width: 5.5rem;
+    left: 0.5rem;
+    top: 0.5rem;
+  }
 }
